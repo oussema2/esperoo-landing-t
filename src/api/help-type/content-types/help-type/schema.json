@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "help_types",
+  "info": {
+    "singularName": "help-type",
+    "pluralName": "help-types",
+    "displayName": "HelpType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "help_articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::help-article.help-article",
+      "mappedBy": "help_type"
+    }
+  }
+}

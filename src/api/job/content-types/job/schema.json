@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "job_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job-type.job-type",
+      "inversedBy": "jobs"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "open_posts": {
+      "type": "biginteger"
+    },
+    "job_applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-application.job-application",
+      "mappedBy": "job"
+    }
+  }
+}

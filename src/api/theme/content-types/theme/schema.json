@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "themes",
+  "info": {
+    "singularName": "theme",
+    "pluralName": "themes",
+    "displayName": "Theme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "theme"
+    },
+    "border_color": {
+      "type": "string"
+    },
+    "left_bg": {
+      "type": "string"
+    },
+    "main_bg": {
+      "type": "string"
+    },
+    "left_text_color": {
+      "type": "string"
+    },
+    "right_text_color": {
+      "type": "string"
+    }
+  }
+}

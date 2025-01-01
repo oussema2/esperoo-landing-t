@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demo_requests",
+  "info": {
+    "singularName": "demo-request",
+    "pluralName": "demo-requests",
+    "displayName": "DemoRequest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "needs": {
+      "type": "text"
+    },
+    "branchesNumber": {
+      "type": "string"
+    },
+    "workerNumber": {
+      "type": "string"
+    },
+    "activitieType": {
+      "type": "string"
+    },
+    "enterpriseName": {
+      "type": "string"
+    }
+  }
+}

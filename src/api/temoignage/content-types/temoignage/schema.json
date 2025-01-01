@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temoignages",
+  "info": {
+    "singularName": "temoignage",
+    "pluralName": "temoignages",
+    "displayName": "temoignage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "cover_pic": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "temoignages"
+    },
+    "content": {
+      "type": "text"
+    },
+    "display": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

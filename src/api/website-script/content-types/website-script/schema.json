@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "website_scripts",
+  "info": {
+    "singularName": "website-script",
+    "pluralName": "website-scripts",
+    "displayName": "websiteScript"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "text"
+    }
+  }
+}

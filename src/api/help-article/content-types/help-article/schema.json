@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "help_articles",
+  "info": {
+    "singularName": "help-article",
+    "pluralName": "help-articles",
+    "displayName": "helpArticle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "help_articles"
+    },
+    "help_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::help-type.help-type",
+      "inversedBy": "help_articles"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "path": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

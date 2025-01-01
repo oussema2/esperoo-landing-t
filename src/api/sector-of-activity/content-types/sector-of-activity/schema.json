@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sector_of_activities",
+  "info": {
+    "singularName": "sector-of-activity",
+    "pluralName": "sector-of-activities",
+    "displayName": "sector",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "sector_of_activity"
+    },
+    "clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client",
+      "mappedBy": "sector"
+    }
+  }
+}

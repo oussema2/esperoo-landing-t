@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_types",
+  "info": {
+    "singularName": "video-type",
+    "pluralName": "video-types",
+    "displayName": "videoType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video_formations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video-formation.video-formation",
+      "mappedBy": "video_type"
+    }
+  }
+}
